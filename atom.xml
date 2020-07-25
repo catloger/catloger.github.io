@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catloger.github.io</id>
     <title>测试学习站</title>
-    <updated>2020-07-25T12:50:50.326Z</updated>
+    <updated>2020-07-25T12:52:30.199Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catloger.github.io"/>
     <link rel="self" href="https://catloger.github.io/atom.xml"/>
@@ -27,7 +27,8 @@
         <link href="https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/">
         </link>
         <updated>2020-07-25T12:21:14.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <content type="html"><![CDATA[<!-- learning pressure?! -->
+<blockquote>
 <p>当今互联网信息时代，信息的流动灵活大大超出预料，很多学习资料尤其IT类基本会点搜索技巧都能获取</p>
 </blockquote>
 <ol>
