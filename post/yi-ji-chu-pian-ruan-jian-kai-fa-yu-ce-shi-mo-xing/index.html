@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    慢慢看清自我 | 测试学习站
+    一、基础篇—软件开发与测试模型 | 测试学习站
 </title>
 <link rel="shortcut icon" href="https://catloger.github.io/favicon.ico?v=1595778618494">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -99,17 +99,24 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            慢慢看清自我
+                            一、基础篇—软件开发与测试模型
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2020-07-25</time>
+                            <time class="post-time">2020-07-26</time>
                             
                         </div>
                         
                                 <div class="post-content">
-                                    <blockquote>
-<p>努力做个纯粹的技术仁，虽然我知道这并不容易</p>
-</blockquote>
+                                    <h3 id="一-软件开发模型">一、软件开发模型</h3>
+<p>1、软件开发生命周期模型是软件产品从最初构思到退役的过程。<br>
+2、常见的开发模型：大爆炸模型、边写边改模型、瀑布模型、螺旋模型、敏捷开发模型</p>
+<ul>
+<li>大瀑布模型</li>
+<li>边写边改模型</li>
+<li>瀑布模型</li>
+<li>螺旋模型</li>
+<li>敏捷开发模型</li>
+</ul>
 
                                 </div>
                     </article>
@@ -117,9 +124,9 @@
                     
                         <div class="next-post">
                             <div class="next">下一篇</div>
-                            <a href="https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/">
+                            <a href="https://catloger.github.io/post/man-man-kan-qing-zi-wo/">
                                 <h3 class="post-title">
-                                    各学习资源渠道
+                                    慢慢看清自我
                                 </h3>
                             </a>
                         </div>
@@ -132,32 +139,50 @@
                 <!-- right -->
                 <div id="sidebar" class="main-container-right">
                     
-                                <!-- id-card -->
-                                
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://catloger.github.io/images/avatar.png?v=1595778618494)">
-        </div>
-        <h1 class="id_card-title">
-            测试学习站
-        </h1>
-        <h2 class="id_card-description">
-            Welcome to Jun`s Blog
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%80-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B">一、软件开发模型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
         </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
     </div>
     
-                                    
+                            
 
                 </div>
 
