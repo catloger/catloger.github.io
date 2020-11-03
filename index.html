@@ -7,7 +7,7 @@
 <title>
     测试学习站
 </title>
-<link rel="shortcut icon" href="https://catloger.github.io/favicon.ico?v=1604387901355">
+<link rel="shortcut icon" href="https://catloger.github.io/favicon.ico?v=1604392437721">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -27,7 +27,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://catloger.github.io">
-                <img class="avatar" src="https://catloger.github.io/images/avatar.png?v=1604387901355" alt="">
+                <img class="avatar" src="https://catloger.github.io/images/avatar.png?v=1604392437721" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -97,6 +97,99 @@
                 <div id="content" class="main-container-left">
                     
         
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://catloger.github.io/post/git-he-github/">
+                        Git 和 Github
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            什么是Git
+  Git是一个免费、开源的版本控制软件
+什么是版本控制系统
+  版本控制是一种记录一个或若干个文件内容变化，以便将来查阅特定版本修订情况的系统。
+其中，系统具体功能：
+
+记录文件的所有历史变化；
+随时可恢复到任何一个历史状态；
+多人协作开发或修改；
+错误恢复；
+
+什么是Github
+  Github是全球最大的社交编程及代码托管网站（https://github.com/），可以在这里学到优秀的开源项目。
+  Github可以托管各种git库，并提供一个web界面（用户名.github.io/仓库名）,本站便是通过这种机制进行创建的。
+Github和Git是什么关系
+  Git是版本控制软件，Github是项目代码托管的平台，借助git来管理项目代码。
+
+Git安装和使用
+GIt官网下载：https://www.git-scm.com/download/win
+Git基本工作流程
+  Git工作区域：
+
+  向仓库中添加文件流程：
+
+  Git管理远程仓库【作用：备份，实现代码共享集中化管理】
+
+
+
+Git初始化及仓库创建和操作
+基本信息设置：
+
+设置用户名
+git config --global user.name &#39;zhangsan&#39;
+设置用户名邮箱
+git config --global user.email &#39;123456@qq.com&#39;
+
+在文件内初始化git（创建git仓库）
+git init
+向仓库添加文件
+touch a1.php # 创建a1.php文件到工作目录
+git add a1.php # 添加a1.php到暂存区
+git commit -m &#39;第一次提交文件&#39; # 添加a1.php到仓库
+修改仓库文件
+vi a1.php
+git status
+git add a1.php
+git status
+删除仓库文件
+rm -rf a1.php
+git rm a1.php
+git commit -m &#39;通过git删除仓库文件&#39;
+将远程仓库（github对应的项目）复制到本地
+git clone 仓库地址
+将本地仓库同步到git远程仓库中
+touch b.php
+git add b.php #添加到暂存区
+git commit -m &#39;提交到仓库&#39;
+git push
+
+排错：The requested URL returned error: 403 Forbidden while accessing
+解决如下：
+私有项目，没有权限，输入用户名密码，或者远程地址采用这种类型：
+vi .git/config
+将[remote &amp;quot;origin&amp;quot;]
+url = https://github.com/用户名/仓库名.git
+修改为：
+[remote &amp;quot;origin&amp;quot;]
+url = https://用户名:密码@github.com/用户名/仓库名.git
+
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://catloger.github.io/post/git-he-github/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
             <article class="post i-card">
                 <h2 class="post-title">
                     <a href="https://catloger.github.io/post/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">
@@ -358,7 +451,7 @@ aaaaaaaaaaaaaaaaaaaaaa
                     <!-- 个人信息 -->
                     
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://catloger.github.io/images/avatar.png?v=1604387901355)">
+        <div class="id_card-avatar" style="background-image: url(https://catloger.github.io/images/avatar.png?v=1604392437721)">
         </div>
         <h1 class="id_card-title">
             测试学习站
