@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    通过github、gridea简单搭建个人网站 | 测试学习站
+    [java] 重写的规定 | 测试学习站
 </title>
 <link rel="shortcut icon" href="https://catloger.github.io/favicon.ico?v=1604387486628">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -106,36 +106,38 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            通过github、gridea简单搭建个人网站
+                            [java] 重写的规定
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2020-07-25</time>
+                            <time class="post-time">2020-08-11</time>
                             
                         </div>
                         
                                 <div class="post-content">
-                                    <blockquote>
-<p>打算暑假这两个月进行学习的整理，虽然现在已经快7月底了</p>
-</blockquote>
-<ul>
-<li>github注册账号、建立新仓库，仓库命名：name.github.io</li>
-<li>下载按照gridea，通过github的developer setting获取token账号，和gridea联动</li>
-<li>更换gridea主题，即个人网站的主题</li>
+                                    <ul>
+<li>方法的声明格式：<br>
+  权限修饰符  返回值类型  方法名（形参列表） throws 异常的类型 {   //方法体  }</li>
+<li>约定俗成：子类中的叫重写的方法 ， 父类中的叫被重写的方法.</li>
 </ul>
+<p>🍉🍉</p>
+<p>①子类重写的方法的方法名和形参列表 与 父类被重写的方法的方法名和形参列表相同</p>
+<p>②子类重写的方法的权限修饰符不小于父类被重写的方法的权限修饰符</p>
+<blockquote>
+<p>特殊情况：子类不能重写父类中声明为private权限的方法</p>
+</blockquote>
+<p>③返回值类型：<br>
+a、父类被重写的方法的返回值类型为void，则子类<br>
+b、父类被重写的方法的返回值类型是A类型(比如:Object)，则子类重写的方法的返回值类型可以是A类或A类的子类(可以是String)<br>
+c、父类被重写的方法的返回值类型是基本数据类型（比如：double），则子类重写的方法的返回值类型必须是相同的基本数据类型(必须也是double)</p>
+<p>④子类重写的方法抛出的异常类型不大于父类被重写的方法抛出的异常类型</p>
+<blockquote>
+<p>注意：子类和父类中的同名同参数的方法要么都声明为非static的（可以考虑重写），要么声明为static的（不是重写）</p>
+</blockquote>
 
                                 </div>
                     </article>
                     <!--  -->
                     
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="https://catloger.github.io/post/guan-yu/">
-                                <h3 class="post-title">
-                                    关于
-                                </h3>
-                            </a>
-                        </div>
-                        
                             <div id="disqus_thread"></div>
                             <div id="gitalk-container"></div>
                 </div>
