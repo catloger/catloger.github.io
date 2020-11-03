@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catloger.github.io</id>
     <title>测试学习站</title>
-    <updated>2020-11-03T07:11:53.144Z</updated>
+    <updated>2020-11-03T07:16:55.600Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catloger.github.io"/>
     <link rel="self" href="https://catloger.github.io/atom.xml"/>
@@ -16,51 +16,6 @@
         <link href="https://catloger.github.io/post/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">
         </link>
         <updated>2020-07-26T15:44:55.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="一-软件开发模型">一、软件开发模型</h3>
-<p>1、软件开发生命周期模型是软件产品从最初构思到退役的过程。</p>
-<p>2、<b>常见的开发模型</b>：大爆炸模型、边写边改模型、瀑布模型、螺旋模型、敏捷开发模型</p>
-<ul>
-<li>
-<p><u>大瀑布模型</u>：<br>
-  最简单的软件开发模式，计划、进度安排和正规开发过程都几乎没有，所有精力都花在开发软件和编 写代码上，最终结果要么产生了优秀的产品，要么就是一堆废品；<br>
-  一般，大爆炸模式几乎没有测试，即使有也要挤在产品发布前，通常都会避免 在此模式下进行测试。</p>
-</li>
-<li>
-<p><u>边写边改模型 </u>：<br>
-  项目小组在未刻意采用其他开发模式时<b>默认</b>的开发模式。<br>
-  开发小组通常最初只有粗略的想法，接着进行一些简单的设计，然后开始漫长的来回编写、测试和修改缺陷的过程，直到觉得足够才发布产品。此种模式是测试期间最有可能碰到的模型。</p>
-<p>☘️ 特点：<br>
-☘ 此种模式没有计划和文档编制，项目能够迅速展现成果，所以比较适合用完就扔的项目；<br>
-☘ 与大爆炸模式类似，测试在边写边改模式中未特别强调，但是在编写代码和修复缺陷过程中举足轻重；<br>
-☘ 软件测试会陷入无休止的循环往复，因为每天都可能在测试新版本。</p>
-</li>
-<li>
-<p><u>瀑布模型 </u>：<br>
-  制定周密计划的模型，一直是唯一被广泛采用的软件开发模型。<br>
-<img src="https://catloger.github.io/post-images/1595780630791.jpg" alt="" loading="lazy"><br>
-  从最初的构思到最终产品要经过一系列步骤骤。每一个步骤结束时，写好文档，项目小组组织审查，并决定是否进入下一步。如果项目未准备好进入下一步，就停滞下来直到准备好。</p>
-<p>🍂 缺点：<br>
-  在瀑布模型中，测试被认为是在软件开发过程的后期阶段进行的“一次性”活 动，这带来一个巨大的缺点，因为测试仅在最后进行，所以一些根本性问题可 能出现在早期，但是直到准备发布产品时才可能发现</p>
-</li>
-<li>
-<p><u>螺旋模型 </u>：<br>
-  计划赶得上变化的模型。<br>
-<img src="https://catloger.github.io/post-images/1595781185184.jpg" alt="" loading="lazy"><br>
-  开始不必详细定义所有细节，从小开始，定义重要功能，努力实现这些功能， 接收客户反馈，然后进入下一阶段，重复上述过程，直至得到最终产品。特别适合于大型复杂系统。</p>
-<p>🌿 特点：<br>
-  😺螺旋模式中包含了一点瀑布模式（分析、设计、开发和测试的步骤）、一点边写边改模式（螺旋模式的每一次）和一点大爆炸模式（从外界观察）。加上该模式发现问题早、成本低的特点，可以算做相当好的开发模式。<br>
-  😸软件测试员喜欢该模式。因为通过参与最初设计的设计阶段，可以尽早地影响到产品，可以把产品的来龙去脉弄得很清楚；并且在项目末期，不至于最后一分钟还在匆匆忙忙地进行全面测试。软件测试员地测试一直都在进行，所以最后一步只是一个验证表面所有部分都没有问题。</p>
-</li>
-<li>
-<p><u>敏捷开发模型 </u>：</p>
-</li>
-</ul>
-<p>  敏捷开发提倡迭代式和增量式的开发模式， 敏捷开发没有单一固定的开发方法或过程，很多快速的开发模式都可以看作是敏捷。但这些模式都有三个共同点：依赖客户的参与、测试驱动以及紧凑的迭代开发周期。<br>
-  敏捷开发的核心思想是：<u>以人为本，适应变化</u>。</p>
-<h3 id="二-软件测试模型">二、软件测试模型</h3>
-<p>  <b>常见的测试模型</b>：<br>
-  V 模型、W 模型、 H 模型、 X 模型、 前置模型 、 敏捷测试模型。</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[慢慢看清自我]]></title>
@@ -68,10 +23,6 @@
         <link href="https://catloger.github.io/post/man-man-kan-qing-zi-wo/">
         </link>
         <updated>2020-07-25T12:35:07.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>努力做个纯粹的技术仁，虽然我知道这并不容易</p>
-</blockquote>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[各学习资源渠道]]></title>
@@ -79,59 +30,6 @@
         <link href="https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/">
         </link>
         <updated>2020-07-25T12:21:14.000Z</updated>
-        <content type="html"><![CDATA[<!-- learning pressure?! -->
-<blockquote>
-<p>当今互联网信息时代，信息的流动灵活大大超出预料，很多学习资料尤其IT类基本会点搜索技巧都能获取</p>
-</blockquote>
-<ol>
-<li>百度网盘</li>
-<li>bilibili</li>
-<li>知乎</li>
-<li>各大技术博客
-<ul>
-<li>csdn</li>
-<li>掘金</li>
-<li>ITpub</li>
-</ul>
-</li>
-<li>公众号</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>项目名</th>
-<th style="text-align:center">技能点</th>
-<th>自我评价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>项目1</td>
-<td style="text-align:center">*</td>
-<td>一般</td>
-</tr>
-<tr>
-<td>项目2</td>
-<td style="text-align:center">***</td>
-<td>一般</td>
-</tr>
-<tr>
-<td>项目3</td>
-<td style="text-align:center">**</td>
-<td>一般</td>
-</tr>
-</tbody>
-</table>
-<p><code>System.out.println(&quot;hello blog&quot;);</code></p>
-<pre><code>public void show(String ... strs){
-        System.out.println(&quot;可变个数形参的方法&quot;);
-        for(int i = 0; i&lt;strs.length ; i++){
-            System.out.println(strs[i]);
-        }
-    }
-</code></pre>
-<h5 id="test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-n">test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test * n</h5>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[通过github、gridea简单搭建个人网站]]></title>
@@ -139,15 +37,6 @@
         <link href="https://catloger.github.io/post/tong-guo-githubgridea-jian-dan-da-jian-ge-ren-wang-zhan/">
         </link>
         <updated>2020-07-25T12:14:59.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>打算暑假这两个月进行学习的整理，虽然现在已经快7月底了</p>
-</blockquote>
-<ul>
-<li>github注册账号、建立新仓库，仓库命名：name.github.io</li>
-<li>下载按照gridea，通过github的developer setting获取token账号，和gridea联动</li>
-<li>更换gridea主题，即个人网站的主题</li>
-</ul>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
@@ -155,10 +44,6 @@
         <link href="https://catloger.github.io/post/guan-yu/">
         </link>
         <updated>2020-07-25T12:08:39.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="欢迎来到本站">欢迎来到本站</h4>
-<h5 id="博主-cyan">博主 —— Cyan</h5>
-<h5 id="简介-本站是cyan学习君第一个blog请各位大佬手下留情">简介 —— 本站是Cyan学习君第一个blog，请各位大佬手下留情</h5>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[这是一篇测试文档]]></title>
@@ -166,8 +51,5 @@
         <link href="https://catloger.github.io/post/zhe-shi-yi-pian-ce-shi-wen-dang/">
         </link>
         <updated>2020-07-25T11:50:05.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="test">test</h4>
-<h6 id="aaaaaaaaaaaaaaaaaaaaaa">aaaaaaaaaaaaaaaaaaaaaa</h6>
-]]></content>
     </entry>
 </feed>
