@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>慢慢看清自我 | 测试学习站</title>
+<title>调整逻辑卷容量 | 测试学习站</title>
 <meta name="description" content="Welcome to Jun`s Blog">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -87,16 +87,90 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>慢慢看清自我</h1>
+            <h1>调整逻辑卷容量</h1>
             <p class="article-meta">
               2020
               
             </p>
             
             <div class="post-content">
-              <blockquote>
-<p>努力做个纯粹的技术仁，虽然我知道这并不容易</p>
-</blockquote>
+              <p>通过题目进行练习：调整本地逻辑卷lv0的容量，要求如下：</p>
+<ul>
+<li>调整后的逻辑卷及文件系统大小为 290M</li>
+<li>调整后确保文件系统已存在的内容不能被破坏</li>
+<li>调整后的容量可能出现误差，在270M-320M之间是允许的</li>
+<li>调整后，保证其挂载目录、文件系统不改变<br>
+<br></li>
+</ul>
+<pre><code>[root@desktop ~]# df‐hT
+Filesystem Type Size Used Avail Use% Mounted on
+/dev/sda1 xfs 9.8G 3.3G 6.5G 34% /
+devtmpfs devtmpfs 660M 0 660M 0% /dev
+tmpfs tmpfs 674M 0 674M 0% /dev/shm
+tmpfs tmpfs 674M 8.9M 666M 2% /run
+tmpfs tmpfs 674M 0 674M 0% /sys/fs/cgroup
+/dev/mapper/vg0‐lv0 ext3 190M 1.6M 179M 1% /home &lt;‐‐‐‐ 当前容量少于 290 MiB,所以要扩容
+tmpfs tmpfs 135M 0 135M 0% /run/user/0
+[root@desktop ~]# lvextend ‐L 290M/dev/vg0/lv0 &lt;‐‐‐ 这是逻辑卷扩容的关键命令
+Rounding size to boundary between physical extents: 292.00 MiB
+Size of logical volume vg0/lv0 changed from 200.00 MiB (50 extents) to 292.00 MiB (73 extents).
+Logical volume lv0 successfullyresized.
+[root@desktop ~]# lvs
+LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert
+lv0 vg0 ‐wi‐ao‐‐‐‐ 292.00m &lt;‐‐‐‐ 成功扩容了，容量一般都会有少量误差，这是正常现象
+
+[root@desktop ~]# resize2fs/dev/vg0/lv0 &lt;‐‐‐ 最后记得刷新文件系统的容量信息
+resize2fs 1.42.9(28‐Dec‐2013) （注意：如果文件系统是 xfs ,那么应该执行 xfs_growfs /dev/vg0/lv0 ）
+Filesystem at/dev/vg0/lv0 is mounted on /home; on‐line resizing required
+old_desc_blocks = 1, new_desc_blocks =2
+The filesystem on /dev/vg0/lv0 is now 299008 blockslong.
+[root@desktop ~]# df‐hT
+Filesystem Type Size Used Avail Use% Mounted on
+/dev/sda1 xfs 9.8G 3.3G 6.5G 34% /
+devtmpfs devtmpfs 660M 0 660M 0% /dev
+tmpfs tmpfs 674M 0 674M 0% /dev/shm
+tmpfs tmpfs 674M 8.9M 666M 2% /run
+tmpfs tmpfs 674M 0 674M 0%/sys/fs/cgroup
+/dev/mapper/vg0‐lv0 ext3 279M 2.1M 263M 1% /home &lt;‐‐‐‐‐ 成功调整
+tmpfs tmpfs 135M 0 135M 0% /run/user/0
+</code></pre>
+<p>题目扩展：如果当前容量比题目要求调整的目标容量要大，那么就需要给逻辑卷裁剪容量参考步骤：</p>
+<pre><code>[root@desktop ~]# umount /dev/vg0/lv0 &lt;‐‐‐ 裁剪容量必须先卸载文件系统
+
+[root@desktop ~]# e2fsck ‐f /dev/vg0/lv0 &lt;‐‐‐ 裁剪前必须检测文件系统，以免把文件系统的错误扩大
+e2fsck 1.42.9(28‐Dec‐2013)
+Pass 1: Checking inodes, blocks, andsizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summaryinformation
+/dev/vg0/lv0: 11/75776 files(0.0% non‐contiguous), 15740/299008 blocks
+[root@desktop ~]# resize2fs /dev/vg0/lv0150M &lt;‐‐ 必须先刷新文件系统的容量信息，这是与扩容相反的，顺序错了就会损坏
+resize2fs 1.42.9(28‐Dec‐2013)
+Please run 'e2fsck ‐f /dev/vg0/lv0'first. &lt;‐‐‐‐ 如果已经检测过，但执行多次还是这个提示，再次执行的时候添加参数 ‐f
+[root@desktop ~]# resize2fs ‐f /dev/vg0/lv0 150M &lt;‐‐‐‐ 添加参数 ‐f 强制调整
+resize2fs 1.42.9(28‐Dec‐2013)
+Resizing the filesystem on /dev/vg0/lv0 to 153600 (1k) blocks.
+The filesystem on /dev/vg0/lv0 is now 153600 blockslong.
+[root@desktop ~]# lvreduce ‐L 150M /dev/vg0/lv0 &lt;‐‐‐‐ 再裁剪逻辑卷设备的容量
+Rounding size to boundary between physical extents: 152.00 MiB
+WARNING: Reducing active logical volume to 152.00 MiB
+THIS MAY DESTROY YOUR DATA (filesystem etc.)
+Do you really want to reduce lv0? [y/n]:y &lt;‐‐‐‐ 需要输入 y 进行确认
+Size of logical volume vg0/lv0 changed from 292.00 MiB (73 extents) to 152.00 MiB (38 extents).
+Logical volume lv0 successfully resized.
+[root@desktop ~]# mount /dev/vg0/lv0 /home &lt;‐‐‐ 如无意外，就能正确挂载
+
+[root@desktop ~]# df ‐h
+Filesystem Size Used Avail Use% Mounted on
+/dev/sda1 9.8G 3.3G 6.5G 34% /
+devtmpfs 660M 0 660M 0% /dev
+tmpfs 674M 0 674M 0% /dev/shm
+tmpfs 674M 8.9M 666M 2% /run
+tmpfs 674M 0 674M 0% /sys/fs/cgroup
+tmpfs 135M 0 135M 0% /run/user/0
+/dev/mapper/vg0‐lv0 142M 1.6M 133M 2% /home
+</code></pre>
 
             </div>
           </article>
@@ -107,9 +181,9 @@
               <div class="next">
                 下一篇
               </div>
-              <a href="https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/">
+              <a href="https://catloger.github.io/post/linux-chong-zhi-xi-tong-mi-ma/">
                 <h3 class="post-title">
-                  各学习资源渠道
+                  linux重置系统密码
                 </h3>
               </a>
             </div>

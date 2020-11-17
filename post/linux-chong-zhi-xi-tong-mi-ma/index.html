@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>慢慢看清自我 | 测试学习站</title>
+<title>linux重置系统密码 | 测试学习站</title>
 <meta name="description" content="Welcome to Jun`s Blog">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -87,16 +87,26 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>慢慢看清自我</h1>
+            <h1>linux重置系统密码</h1>
             <p class="article-meta">
               2020
               
             </p>
             
             <div class="post-content">
-              <blockquote>
-<p>努力做个纯粹的技术仁，虽然我知道这并不容易</p>
+              <p>1、重启系统：在已开机的 Desktop 虚拟机上，同时按下 Ctrl + Alt + Del三键。<br>
+2、在 Grub Boot Loader 倒计时读秒结束前，按下任意键。<br>
+3、选中默认的第一个启动条目，并按下键盘字母 e 键，以便编辑<br>
+<img src="https://catloger.github.io/post-images/1605617909967.jpg" alt="" loading="lazy"><br>
+4、进入启动条目编辑界面后，通过键盘方向键（↓），找到第一个以 linux16 开头的行，并通过按下 Ctrl + e 快速把光标定位到该行的行末，输入 &lt;空格键&gt; rd.break<br>
+<img src="https://catloger.github.io/post-images/1605618070703.jpg" alt="" loading="lazy"><br>
+5、确定没错之后，按下 Ctrl + x ，以修改后的配置引导系统，系统将启动到临时内核 shell 界面，输入以下指令即可修改密码。<br>
+<img src="https://catloger.github.io/post-images/1605618173308.jpg" alt="" loading="lazy"></p>
+<blockquote>
+<p>注意：修改密码后，首次重启的时间将会比较长，因为系统将对所有文件进行 SeLinux 打标，请耐心等待，整个过程并非死机，请勿在打标过程中手动强制再次重启，否则系统将会永久性损坏导致无法开机。<br>
+<img src="https://catloger.github.io/post-images/1605618261606.jpg" alt="" loading="lazy"></p>
 </blockquote>
+<p>6、成功启动系统后，输入账号 root,密码为修改后的密码后即完成系统密码的重置</p>
 
             </div>
           </article>
@@ -107,9 +117,9 @@
               <div class="next">
                 下一篇
               </div>
-              <a href="https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/">
+              <a href="https://catloger.github.io/post/linux-xi-tong-ruan-jian-bao-an-zhuang/">
                 <h3 class="post-title">
-                  各学习资源渠道
+                  Linux系统软件包安装
                 </h3>
               </a>
             </div>

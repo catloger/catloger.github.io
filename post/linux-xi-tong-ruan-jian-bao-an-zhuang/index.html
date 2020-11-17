@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>慢慢看清自我 | 测试学习站</title>
+<title>Linux系统软件包安装 | 测试学习站</title>
 <meta name="description" content="Welcome to Jun`s Blog">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -87,16 +87,99 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>慢慢看清自我</h1>
+            <h1>Linux系统软件包安装</h1>
             <p class="article-meta">
               2020
               
             </p>
             
             <div class="post-content">
-              <blockquote>
-<p>努力做个纯粹的技术仁，虽然我知道这并不容易</p>
+              <h2 id="linux系统软件包安装">Linux系统软件包安装</h2>
+<p>一、RPM包安装</p>
+<p>（1）手工命令安装：【rpm xx xxx】</p>
+<pre><code>安装：  rpm  -ivh  包全名
+升级：	 rpm  -Uvh 包全名
+卸载：	 rpm  -e  包名
+查询：
+    a、	查询是否安装     
+           rpm  -q 包名
+           rpm  -qa | grep 包名 
+    b、	查询包信息     
+            rpm  -qi 包名
+            rpm  -qip  包全名
+    c、	查询安装位置
+            rpm  -ql  包名
+            rpm  -qlp  包全名
+    d、	查询系统文件属于哪个包
+            rpm  -qf  系统文件名
+
+    e、	查询依赖性
+            rpm  -qR  包名    (会把有无安装的都显示出来)
+</code></pre>
+<blockquote>
+<p>严格区分包名和包全名只在rpm包手工安装才需要注意，用yum源都用包名即可<br>
+需要提取RPM包中的文件【特殊格式】就需要用到cpio:<br>
+    提取PRM包中文件：  rpm2cpio  包全名 | cpio  -idv  .文件绝对路径  (. 是当前目录，不允许删除，没加会覆盖原文件)</p>
 </blockquote>
+<p>（2）rpm包在线安装（yum 安装）</p>
+<blockquote>
+<p>系统当中没有yum包，yum仅仅只是rpm包的在线安装方法，仅仅只是rpm包安装中的一种，所有是没有“yum包”的说法。</p>
+</blockquote>
+<blockquote>
+<p>(yum源)文件解析   ** /etc/yum.repo.d/  **<br>
+默认是xxx-Base.repo (网络yum源) 生效，国外比较慢；练习用xx-Media.repo<br>
+真实服务器用网络yum源<br>
+实际上yum源检测是是后缀名</p>
+</blockquote>
+<pre><code>    安装     yum  -y  install 包名 
+    升级     yum  -y  update 包名  
+             不加包名升级本机所有软件包，少见慎用，稳定优先，linux5以前等老版本有兼容问题】
+    卸载     yum remove 包名 
+              注意依赖性，安装的时候要注意依赖性，卸载的时候也要注意依赖性
+
+    yum组管理命令：
+    查询可以安装的软件组： 
+            yum  group  list
+    查询软件组内包含的软件： 
+            yum  groupinfo  软件组名
+    安装软件组： 
+            yum  groupinstall  软件组名
+    卸载： 
+            yum groupremove 软件组名
+</code></pre>
+<p>二、源码包安装</p>
+<ul>
+<li>
+<p>安装方式怎么选<br>
+如果用户量大，用源码包，如LAMP环境搭建，效率高； 如果软件包是给linux底层使用，或用户量少，用rpm包安装，因为rpm包简单。</p>
+</li>
+<li>
+<p>是否可以在系统中既安装rpm包的Apache，又安装源码包的Apache<br>
+可以。因为安装位置不同。rpm安装在默认位置，rpm有数据库，有卸载命令。源码包必须指定安装位置(源码包没有安装数据库，没有卸载命令)，安装在/usr/local/自己命名。极个别源码包不能指定安装位置，指定了会报错。但是，实际生产没必要，系统中只有一个80端口，所有只能启动一个Apache，建议安装源码包的Apache</p>
+</li>
+<li>
+<p>服务是否可以修改端口：<br>
+给外部访问（客户量大）-&gt; 不建议，用户找不到<br>
+内部人员使用，建议修改端口，因为更加安全（SSH 22）。</p>
+</li>
+</ul>
+<p>（2）安装过程 （以安装Apache为例）——  需要先装gcc</p>
+<ol>
+<li>官网下载源码包  wget</li>
+<li>tar  -zxvf  httpd-2.2.9.tar.gz</li>
+<li>cd 解压目录  [ cd http-2.2.9 ]</li>
+<li>./configure  [编译前准备 ； ./ 是当前目录下 ；configure不是系统命令，而是源码包软件自带的一个脚本程序]<br>
+./config  --help    【./configure 需要进入到解压后的文件才能用】<br>
+./configure  --prefix=/usr/local/apache2/</li>
+<li>make   编译</li>
+<li>make clean    清空编译内容（非必须步骤）</li>
+<li>make  install    编译安装
+<blockquote>
+<p>4、5步报错只需修正后执行 make clean 即可，它会清空Makefile 文件或编译产生的”.o”头文件<br>
+第7步报错不仅需要make clean ,还要删除 /usr/local/Apache2</p>
+</blockquote>
+</li>
+</ol>
 
             </div>
           </article>
@@ -107,9 +190,9 @@
               <div class="next">
                 下一篇
               </div>
-              <a href="https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/">
+              <a href="https://catloger.github.io/post/yi-dong-app-ce-shi/">
                 <h3 class="post-title">
-                  各学习资源渠道
+                  移动APP测试
                 </h3>
               </a>
             </div>
