@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catloger.github.io</id>
     <title>Jun`s Blog</title>
-    <updated>2020-11-18T13:23:48.446Z</updated>
+    <updated>2020-11-18T13:25:45.685Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catloger.github.io"/>
     <link rel="self" href="https://catloger.github.io/atom.xml"/>
@@ -67,17 +67,17 @@
         <updated>2020-11-03T07:23:30.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[java]JUnit单元测试]]></title>
-        <id>https://catloger.github.io/javajunit-dan-yuan-ce-shi/</id>
-        <link href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/">
-        </link>
-        <updated>2020-08-15T08:59:13.000Z</updated>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[一、基础篇—软件开发与测试模型]]></title>
         <id>https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/</id>
         <link href="https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">
         </link>
         <updated>2020-07-26T15:44:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://catloger.github.io/guan-yu/</id>
+        <link href="https://catloger.github.io/guan-yu/">
+        </link>
+        <updated>2020-07-25T12:08:39.000Z</updated>
     </entry>
 </feed>
