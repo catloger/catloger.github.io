@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Jun`s Blog</title>
+<title>Git 和 Github | Jun`s Blog</title>
 <meta name="description" content="Welcome to Jun`s Blog">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -15,6 +15,12 @@
 <link rel="stylesheet" href="https://catloger.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
@@ -23,6 +29,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://catloger.github.io">Jun`s Blog</a></h3>
@@ -76,225 +83,116 @@
   </div>
 </nav>
 
-
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
+          <article class="article">
+            <h1>Git 和 Github</h1>
+            <p class="article-meta">
+              2020
+              
+            </p>
+            
+            <div class="post-content">
+              <p><strong>什么是Git</strong><br>
+  Git是一个免费、开源的版本控制软件</p>
+<p><strong>什么是版本控制系统</strong><br>
+  版本控制是一种记录一个或若干个文件内容变化，以便将来查阅特定版本修订情况的系统。<br>
+其中，系统具体功能：</p>
+<ul>
+<li>记录文件的所有历史变化；</li>
+<li>随时可恢复到任何一个历史状态；</li>
+<li>多人协作开发或修改；</li>
+<li>错误恢复；</li>
+</ul>
+<p><strong>什么是Github</strong><br>
+  Github是全球最大的社交编程及代码托管网站（https://github.com/），可以在这里学到优秀的开源项目。<br>
+  Github可以托管各种git库，并提供一个web界面（用户名.github.io/仓库名）,本站便是通过这种机制进行创建的。</p>
+<p><strong>Github和Git是什么关系</strong><br>
+  Git是版本控制软件，Github是项目代码托管的平台，借助git来管理项目代码。</p>
+<hr>
+<p><strong>Git安装和使用</strong><br>
+GIt官网下载：<a href="https://www.git-scm.com/download/win">https://www.git-scm.com/download/win</a></p>
+<p><strong>Git基本工作流程</strong><br>
+  Git工作区域：<br>
+<img src="https://catloger.github.io/post-images/1604392726335.png" alt="" loading="lazy"><br>
+  向仓库中添加文件流程：<br>
+<img src="https://catloger.github.io/post-images/1604392738301.png" alt="" loading="lazy"><br>
+  Git管理远程仓库【作用：备份，实现代码共享集中化管理】<br>
+<img src="https://catloger.github.io/post-images/1604392746426.png" alt="" loading="lazy"><br>
+<img src="https://catloger.github.io/post-images/1604392754140.png" alt="" loading="lazy"></p>
+<hr>
+<p><strong>Git初始化及仓库创建和操作</strong><br>
+基本信息设置：</p>
+<ul>
+<li>设置用户名<br>
+<code>git config --global user.name 'zhangsan'</code></li>
+<li>设置用户名邮箱<br>
+<code>git config --global user.email '123456@qq.com'</code></li>
+</ul>
+<p>在文件内初始化git（创建git仓库）<br>
+<code>git init</code></p>
+<p>向仓库添加文件<br>
+<code>touch a1.php # 创建a1.php文件到工作目录</code><br>
+<code>git add a1.php # 添加a1.php到暂存区</code><br>
+<code>git commit -m '第一次提交文件' # 添加a1.php到仓库</code></p>
+<p>修改仓库文件<br>
+<code>vi a1.php</code><br>
+<code>git status</code><br>
+<code>git add a1.php</code><br>
+<code>git status</code></p>
+<p>删除仓库文件<br>
+<code>rm -rf a1.php</code><br>
+<code>git rm a1.php</code><br>
+<code>git commit -m '通过git删除仓库文件'</code></p>
+<p>将远程仓库（github对应的项目）复制到本地<br>
+<code>git clone 仓库地址</code></p>
+<p>将本地仓库同步到git远程仓库中<br>
+<code>touch b.php</code><br>
+<code>git add b.php #添加到暂存区</code><br>
+<code>git commit -m '提交到仓库'</code><br>
+<code>git push</code></p>
+<blockquote>
+<p>排错：The requested URL returned error: 403 Forbidden while accessing<br>
+解决如下：<br>
+私有项目，没有权限，输入用户名密码，或者远程地址采用这种类型：<br>
+vi .git/config<br>
+将[remote &quot;origin&quot;]<br>
+url = https://github.com/用户名/仓库名.git<br>
+修改为：<br>
+[remote &quot;origin&quot;]<br>
+url = https://用户名:密码@github.com/用户名/仓库名.git</p>
+</blockquote>
+<hr>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
           
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/">设计测试用例_判定表法则</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/">等价类和边界值案例练习</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/">数据分析常用库思维导图</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/">调整逻辑卷容量</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/">linux重置系统密码</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/">Linux系统软件包安装</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/yi-dong-app-ce-shi/">移动APP测试</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/yi-dong-app-ce-shi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/git-he-github/">Git 和 Github</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/git-he-github/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/">[java]JUnit单元测试</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">一、基础篇—软件开发与测试模型</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/">
+                <h3 class="post-title">
+                  [java]JUnit单元测试
+                </h3>
+              </a>
+            </div>
+          
         </div>
         
-        <div class="row flex-edges">
-  
-  
-    <a href="https://catloger.github.io/page/2" class="paper-btn">
-      下一页
-    </a>
-  
-</div>
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
 
+          
+        
       </div>
-      
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://catloger.github.io/images/avatar.png?v=1605705318328" class="no-responsive avatar">
@@ -416,7 +314,9 @@
   </div>
 </div>
 
+
     </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
@@ -426,6 +326,29 @@ AOS.init();
 hljs.initHighlightingOnLoad()
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

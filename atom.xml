@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catloger.github.io</id>
-    <title>测试学习站</title>
-    <updated>2020-11-17T13:57:37.224Z</updated>
+    <title>Jun`s Blog</title>
+    <updated>2020-11-18T13:15:20.625Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catloger.github.io"/>
     <link rel="self" href="https://catloger.github.io/atom.xml"/>
     <subtitle>Welcome to Jun`s Blog</subtitle>
     <logo>https://catloger.github.io/images/avatar.png</logo>
     <icon>https://catloger.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 测试学习站</rights>
+    <rights>All rights reserved 2020, Jun`s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[设计测试用例_判定表法则]]></title>
+        <id>https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/</id>
+        <link href="https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/">
+        </link>
+        <updated>2020-11-17T15:04:53.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[等价类和边界值案例练习]]></title>
+        <id>https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/</id>
+        <link href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/">
+        </link>
+        <updated>2020-11-17T14:37:09.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[数据分析常用库思维导图]]></title>
-        <id>https://catloger.github.io/post/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/</id>
-        <link href="https://catloger.github.io/post/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/">
+        <id>https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/</id>
+        <link href="https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/">
         </link>
         <updated>2020-11-17T13:20:53.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[调整逻辑卷容量]]></title>
-        <id>https://catloger.github.io/post/diao-zheng-luo-ji-juan-rong-liang/</id>
-        <link href="https://catloger.github.io/post/diao-zheng-luo-ji-juan-rong-liang/">
+        <id>https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/</id>
+        <link href="https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/">
         </link>
         <updated>2020-11-17T13:09:43.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[linux重置系统密码]]></title>
-        <id>https://catloger.github.io/post/linux-chong-zhi-xi-tong-mi-ma/</id>
-        <link href="https://catloger.github.io/post/linux-chong-zhi-xi-tong-mi-ma/">
+        <id>https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/</id>
+        <link href="https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/">
         </link>
         <updated>2020-11-17T12:30:46.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux系统软件包安装]]></title>
-        <id>https://catloger.github.io/post/linux-xi-tong-ruan-jian-bao-an-zhuang/</id>
-        <link href="https://catloger.github.io/post/linux-xi-tong-ruan-jian-bao-an-zhuang/">
+        <id>https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/</id>
+        <link href="https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/">
         </link>
         <updated>2020-11-17T11:55:00.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[移动APP测试]]></title>
-        <id>https://catloger.github.io/post/yi-dong-app-ce-shi/</id>
-        <link href="https://catloger.github.io/post/yi-dong-app-ce-shi/">
+        <id>https://catloger.github.io/yi-dong-app-ce-shi/</id>
+        <link href="https://catloger.github.io/yi-dong-app-ce-shi/">
         </link>
         <updated>2020-11-03T13:06:38.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Git 和 Github]]></title>
-        <id>https://catloger.github.io/post/git-he-github/</id>
-        <link href="https://catloger.github.io/post/git-he-github/">
+        <id>https://catloger.github.io/git-he-github/</id>
+        <link href="https://catloger.github.io/git-he-github/">
         </link>
         <updated>2020-11-03T07:23:30.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[[java]JUnit单元测试]]></title>
-        <id>https://catloger.github.io/post/javajunit-dan-yuan-ce-shi/</id>
-        <link href="https://catloger.github.io/post/javajunit-dan-yuan-ce-shi/">
+        <id>https://catloger.github.io/javajunit-dan-yuan-ce-shi/</id>
+        <link href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/">
         </link>
         <updated>2020-08-15T08:59:13.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[一、基础篇—软件开发与测试模型]]></title>
-        <id>https://catloger.github.io/post/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/</id>
-        <link href="https://catloger.github.io/post/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">
+        <id>https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/</id>
+        <link href="https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">
         </link>
         <updated>2020-07-26T15:44:55.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[慢慢看清自我]]></title>
-        <id>https://catloger.github.io/post/man-man-kan-qing-zi-wo/</id>
-        <link href="https://catloger.github.io/post/man-man-kan-qing-zi-wo/">
-        </link>
-        <updated>2020-07-25T12:35:07.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[各学习资源渠道]]></title>
-        <id>https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/</id>
-        <link href="https://catloger.github.io/post/ge-xue-xi-zi-yuan-qu-dao/">
-        </link>
-        <updated>2020-07-25T12:21:14.000Z</updated>
     </entry>
 </feed>

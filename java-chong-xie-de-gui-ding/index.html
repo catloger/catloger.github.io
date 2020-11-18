@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Jun`s Blog</title>
+<title>[java] 重写的规定 | Jun`s Blog</title>
 <meta name="description" content="Welcome to Jun`s Blog">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -15,6 +15,12 @@
 <link rel="stylesheet" href="https://catloger.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
@@ -23,6 +29,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://catloger.github.io">Jun`s Blog</a></h3>
@@ -76,225 +83,54 @@
   </div>
 </nav>
 
-
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
+          <article class="article">
+            <h1>[java] 重写的规定</h1>
+            <p class="article-meta">
+              2020
+              
+            </p>
+            
+            <div class="post-content">
+              <ul>
+<li>方法的声明格式：<br>
+  权限修饰符  返回值类型  方法名（形参列表） throws 异常的类型 {   //方法体  }</li>
+<li>约定俗成：子类中的叫重写的方法 ， 父类中的叫被重写的方法.</li>
+</ul>
+<p>🍉🍉</p>
+<p>①子类重写的方法的方法名和形参列表 与 父类被重写的方法的方法名和形参列表相同</p>
+<p>②子类重写的方法的权限修饰符不小于父类被重写的方法的权限修饰符</p>
+<blockquote>
+<p>特殊情况：子类不能重写父类中声明为private权限的方法</p>
+</blockquote>
+<p>③返回值类型：<br>
+a、父类被重写的方法的返回值类型为void，则子类<br>
+b、父类被重写的方法的返回值类型是A类型(比如:Object)，则子类重写的方法的返回值类型可以是A类或A类的子类(可以是String)<br>
+c、父类被重写的方法的返回值类型是基本数据类型（比如：double），则子类重写的方法的返回值类型必须是相同的基本数据类型(必须也是double)</p>
+<p>④子类重写的方法抛出的异常类型不大于父类被重写的方法抛出的异常类型</p>
+<blockquote>
+<p>注意：子类和父类中的同名同参数的方法要么都声明为非static的（可以考虑重写），要么声明为static的（不是重写）</p>
+</blockquote>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
           
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/">设计测试用例_判定表法则</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/">等价类和边界值案例练习</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/">数据分析常用库思维导图</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/">调整逻辑卷容量</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/">linux重置系统密码</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/">Linux系统软件包安装</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/yi-dong-app-ce-shi/">移动APP测试</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/yi-dong-app-ce-shi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/git-he-github/">Git 和 Github</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/git-he-github/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/">[java]JUnit单元测试</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">一、基础篇—软件开发与测试模型</a>
-    </h2>
-    <p class="article-meta">
-      2020
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
         </div>
         
-        <div class="row flex-edges">
-  
-  
-    <a href="https://catloger.github.io/page/2" class="paper-btn">
-      下一页
-    </a>
-  
-</div>
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
 
+          
+        
       </div>
-      
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://catloger.github.io/images/avatar.png?v=1605705318328" class="no-responsive avatar">
@@ -416,7 +252,9 @@
   </div>
 </div>
 
+
     </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
@@ -426,6 +264,29 @@ AOS.init();
 hljs.initHighlightingOnLoad()
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

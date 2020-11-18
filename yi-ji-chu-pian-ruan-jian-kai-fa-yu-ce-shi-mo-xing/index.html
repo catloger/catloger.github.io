@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>一、基础篇—软件开发与测试模型 | Jun`s Blog</title>
+<meta name="description" content="Welcome to Jun`s Blog">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://catloger.github.io/favicon.ico?v=1605705318328">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://catloger.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://catloger.github.io">Jun`s Blog</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>一、基础篇—软件开发与测试模型</h1>
+            <p class="article-meta">
+              2020
+              
+            </p>
+            
+            <div class="post-content">
+              <h3 id="一-软件开发模型">一、软件开发模型</h3>
+<p>1、软件开发生命周期模型是软件产品从最初构思到退役的过程。</p>
+<p>2、<b>常见的开发模型</b>：大爆炸模型、边写边改模型、瀑布模型、螺旋模型、敏捷开发模型</p>
+<ul>
+<li>
+<p><u>大瀑布模型</u>：<br>
+  最简单的软件开发模式，计划、进度安排和正规开发过程都几乎没有，所有精力都花在开发软件和编 写代码上，最终结果要么产生了优秀的产品，要么就是一堆废品；<br>
+  一般，大爆炸模式几乎没有测试，即使有也要挤在产品发布前，通常都会避免 在此模式下进行测试。</p>
+</li>
+<li>
+<p><u>边写边改模型 </u>：<br>
+  项目小组在未刻意采用其他开发模式时<b>默认</b>的开发模式。<br>
+  开发小组通常最初只有粗略的想法，接着进行一些简单的设计，然后开始漫长的来回编写、测试和修改缺陷的过程，直到觉得足够才发布产品。此种模式是测试期间最有可能碰到的模型。</p>
+<p>☘️ 特点：<br>
+☘ 此种模式没有计划和文档编制，项目能够迅速展现成果，所以比较适合用完就扔的项目；<br>
+☘ 与大爆炸模式类似，测试在边写边改模式中未特别强调，但是在编写代码和修复缺陷过程中举足轻重；<br>
+☘ 软件测试会陷入无休止的循环往复，因为每天都可能在测试新版本。</p>
+</li>
+<li>
+<p><u>瀑布模型 </u>：<br>
+  制定周密计划的模型，一直是唯一被广泛采用的软件开发模型。<br>
+<img src="https://catloger.github.io/post-images/1595780630791.jpg" alt="" loading="lazy"><br>
+  从最初的构思到最终产品要经过一系列步骤骤。每一个步骤结束时，写好文档，项目小组组织审查，并决定是否进入下一步。如果项目未准备好进入下一步，就停滞下来直到准备好。</p>
+<p>🍂 缺点：<br>
+  在瀑布模型中，测试被认为是在软件开发过程的后期阶段进行的“一次性”活 动，这带来一个巨大的缺点，因为测试仅在最后进行，所以一些根本性问题可 能出现在早期，但是直到准备发布产品时才可能发现</p>
+</li>
+<li>
+<p><u>螺旋模型 </u>：<br>
+  计划赶得上变化的模型。<br>
+<img src="https://catloger.github.io/post-images/1595781185184.jpg" alt="" loading="lazy"><br>
+  开始不必详细定义所有细节，从小开始，定义重要功能，努力实现这些功能， 接收客户反馈，然后进入下一阶段，重复上述过程，直至得到最终产品。特别适合于大型复杂系统。</p>
+<p>🌿 特点：<br>
+  😺螺旋模式中包含了一点瀑布模式（分析、设计、开发和测试的步骤）、一点边写边改模式（螺旋模式的每一次）和一点大爆炸模式（从外界观察）。加上该模式发现问题早、成本低的特点，可以算做相当好的开发模式。<br>
+  😸软件测试员喜欢该模式。因为通过参与最初设计的设计阶段，可以尽早地影响到产品，可以把产品的来龙去脉弄得很清楚；并且在项目末期，不至于最后一分钟还在匆匆忙忙地进行全面测试。软件测试员地测试一直都在进行，所以最后一步只是一个验证表面所有部分都没有问题。</p>
+</li>
+<li>
+<p><u>敏捷开发模型 </u>：</p>
+</li>
+</ul>
+<p>  敏捷开发提倡迭代式和增量式的开发模式， 敏捷开发没有单一固定的开发方法或过程，很多快速的开发模式都可以看作是敏捷。但这些模式都有三个共同点：依赖客户的参与、测试驱动以及紧凑的迭代开发周期。<br>
+  敏捷开发的核心思想是：<u>以人为本，适应变化</u>。</p>
+<h3 id="二-软件测试模型">二、软件测试模型</h3>
+<p>  <b>常见的测试模型</b>：<br>
+  V 模型、W 模型、 H 模型、 X 模型、 前置模型 、 敏捷测试模型。</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://catloger.github.io/guan-yu/">
+                <h3 class="post-title">
+                  关于
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://catloger.github.io/images/avatar.png?v=1605705318328" class="no-responsive avatar">
+    <div class="text-muted">Welcome to Jun`s Blog</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/">设计测试用例_判定表法则</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/">等价类和边界值案例练习</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/">数据分析常用库思维导图</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/">调整逻辑卷容量</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/">linux重置系统密码</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/">Linux系统软件包安装</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/yi-dong-app-ce-shi/">移动APP测试</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/git-he-github/">Git 和 Github</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/javajunit-dan-yuan-ce-shi/">[java]JUnit单元测试</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://catloger.github.io/java-duo-tai-xing/">[java] 多态性</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://catloger.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
