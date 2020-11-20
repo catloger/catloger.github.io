@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catloger.github.io</id>
     <title>Jun`s Blog</title>
-    <updated>2020-11-19T09:40:09.863Z</updated>
+    <updated>2020-11-20T04:17:08.796Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catloger.github.io"/>
     <link rel="self" href="https://catloger.github.io/atom.xml"/>
@@ -18,7 +18,7 @@
         <updated>2020-11-17T15:04:53.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[等价类和边界值案例练习]]></title>
+        <title type="html"><![CDATA[等价类和边界值]]></title>
         <id>https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/</id>
         <link href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/">
         </link>
