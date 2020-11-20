@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://catloger.github.io</id>
     <title>Jun`s Blog</title>
-    <updated>2020-11-20T04:50:09.029Z</updated>
+    <updated>2020-11-20T04:54:11.053Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://catloger.github.io"/>
     <link rel="self" href="https://catloger.github.io/atom.xml"/>
@@ -10,62 +10,6 @@
     <logo>https://catloger.github.io/images/avatar.png</logo>
     <icon>https://catloger.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Jun`s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[设计测试用例_判定表法则]]></title>
-        <id>https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/</id>
-        <link href="https://catloger.github.io/she-ji-ce-shi-yong-li-_-pan-ding-biao-fa-ze/">
-        </link>
-        <updated>2020-11-17T15:04:53.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[数据分析常用库思维导图]]></title>
-        <id>https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/</id>
-        <link href="https://catloger.github.io/shu-ju-fen-xi-chang-yong-ku-si-wei-dao-tu/">
-        </link>
-        <updated>2020-11-17T13:20:53.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[调整逻辑卷容量]]></title>
-        <id>https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/</id>
-        <link href="https://catloger.github.io/diao-zheng-luo-ji-juan-rong-liang/">
-        </link>
-        <updated>2020-11-17T13:09:43.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[linux重置系统密码]]></title>
-        <id>https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/</id>
-        <link href="https://catloger.github.io/linux-chong-zhi-xi-tong-mi-ma/">
-        </link>
-        <updated>2020-11-17T12:30:46.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux系统软件包安装]]></title>
-        <id>https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/</id>
-        <link href="https://catloger.github.io/linux-xi-tong-ruan-jian-bao-an-zhuang/">
-        </link>
-        <updated>2020-11-17T11:55:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[移动APP测试]]></title>
-        <id>https://catloger.github.io/yi-dong-app-ce-shi/</id>
-        <link href="https://catloger.github.io/yi-dong-app-ce-shi/">
-        </link>
-        <updated>2020-11-03T13:06:38.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Git 和 Github]]></title>
-        <id>https://catloger.github.io/git-he-github/</id>
-        <link href="https://catloger.github.io/git-he-github/">
-        </link>
-        <updated>2020-11-03T07:23:30.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[一、基础篇—软件开发与测试模型]]></title>
-        <id>https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/</id>
-        <link href="https://catloger.github.io/yi-ji-chu-pian-ruan-jian-kai-fa-yu-ce-shi-mo-xing/">
-        </link>
-        <updated>2020-07-26T15:44:55.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[关于]]></title>
         <id>https://catloger.github.io/guan-yu/</id>

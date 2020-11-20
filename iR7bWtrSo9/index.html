@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    [Java] 方法重写 | Jun`s Blog
+    黑盒测试 | Jun`s Blog
 </title>
 <link rel="shortcut icon" href="https://catloger.github.io/favicon.ico?v=1605848044056">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -19,14 +19,6 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-        
-            
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-                
-
-                    
-                            
 </head>
 
 <body>
@@ -101,39 +93,119 @@
     });
 </script>
 
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
+            <div id="main-content" class="post-container main-container">
                 <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            [Java] 方法重写
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2020</time>
-                            
-                        </div>
+                    
+    <div class="i-card">
+        <b>标签：#
+        黑盒测试</b>
+    </div>
+    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/">
+                        等价类和边界值
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020</time>
+                    
+                        <a href="https://catloger.github.io/KgmxkTqib/" class="post-tag i-tag
+                            i-tag-success">
+            #测试用例设计
+        </a>
                         
-                                <div class="post-content">
-                                    <ul>
-<li>java方法重写的理解</li>
-<li>java方法重写的细节</li>
-<li>java方法重写的练习</li>
-</ul>
-
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
+                        <a href="https://catloger.github.io/iR7bWtrSo9/" class="post-tag i-tag
+                            i-tag-other_2">
+            #黑盒测试
+        </a>
+                        
                 </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
+                <div class="post-article">
                     
-                                <!-- id-card -->
+                            <div class="post-content">
                                 
+                                        <div class="post-content-content">
+                                            
+
+测试用例的特征：
+  有效性：能使用，不同人使用结果一致
+  可复用性：良好的测试用例具有重复使用的功能   [如回归测试]
+  易组织 : 分门别类供不同类测试人员使用    [例： 测试用例按功能、性能、易用等分类编号]
+  可评估性：从测试管理的角度，测试用例的通过率和软件缺陷的数目是软件产品质量好坏的测试标准。   [评估软件质量（测试计划）]
+  可管理性：可以对测试人员进行工作量和绩效考核
+
+
+等价类划分技巧
+① 测试用例分析最好用xmind
+② 按等价类给出数据最好用电子表格
+③ 当产生意见分歧，回看需求规格说明书
+
+
+无效等价类在一个用例中只能出现一次   （一个新用例只能覆盖一条无效规则）
+
+
+有效等价类在一个用例中可以出现多次   （一个新用例尽量覆盖有效规则 )
+
+
+等价类要关注的要点
+① 长度
+② 类型
+③ 字母
+④ 汉字
+⑤ 特殊字符
+⑥ 空
+⑦ 空格
+
+
+边界值
+① 闭区间
+1 ----- 100    [1,100]
+0 1 2           99  100 101
+上点： 1，100    （有效点）
+离点： 0，101    （无效点）
+内点： 2，99      （有效点）
+② 开区间   (1,100)
+1 2 3       98  99  100
+上点： 2，99
+离点： 1，100
+内点： 3，98
+
+
+
+- 案例举例 -
+某城市电话号码由三部分组成，分别是：
+地区码：空白或是3位数字
+前缀：非‘0’且非‘1’开头的三位数字
+后缀：4位数字
+假定被测程序能接受一切符合上述规定的电话号码，拒绝所有不符合规定的电话号码。
+等价类表：
+
+[ 总共需要写（15）条测试用例 ]
+[ 注意：在写测试用例前应该是知道要写多少条测试用例，除非需求发生变化或对需求有歧义 ]
+【思路：每一条无效等价类都对应一条用例，所以实际上就看有效等价类，看看有效等价类里能不能进行合并，看对应要求等效最多的 (地区码) 即有效就有多少条】
+
+（边界值常常结合等价类设计测试用例）
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://catloger.github.io/deng-jie-lei-he-bian-jie-zhi-an-li-lian-xi/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
     <div class="id_card i-card">
         <div class="id_card-avatar" style="background-image: url(https://catloger.github.io/images/avatar.png?v=1605848044056)">
         </div>
@@ -157,14 +229,20 @@
         </div>
     </div>
     
-                                    
+
+                        <!-- 公告栏 -->
+                        
+    <div class="notice-card i-card ">
+        <div class="notice-title i-card-title">公告</div>
+        <div class="notice-content">
+            这里是一个公告栏
+        </div>
+    </div>
+    
 
                 </div>
-
-
-
-
             </div>
+
 
 
             <div class="site-footer">
@@ -176,7 +254,6 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-
     </div>
     <script>
         $('#sidebar').stickySidebar({
@@ -184,27 +261,6 @@
             // bottomSpacing: 60
         });
     </script>
-    
-        
-            <script>
-    window.onload = function() {
-        var gitalk = new Gitalk({
-            clientID: '',
-            clientSecret: '',
-            repo: '',
-            owner: '',
-            admin: [''],
-            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
-        })
-
-        gitalk.render('gitalk-container')
-    }
-</script>
-                
-
-                    
-                                
 </body>
 
 </html>
